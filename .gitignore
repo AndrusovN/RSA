@@ -2,3 +2,5 @@ key
 key.pub
 venv/
 __pycache__/
+safe_key
+safe_key.pub

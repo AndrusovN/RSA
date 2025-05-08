@@ -9,7 +9,7 @@ def generate_prime(min_val: int, max_val: int) -> int:
     maxiter = int(math.log2(max_val) * 1000)
     for _ in range(maxiter):
         candidate = random.randint(min_val, max_val)
-        if gmpy2.is_prime(candidate) and gmpy2.is_prime(candidate * 2 + 1):
+        if gmpy2.is_prime(candidate) and gmpy2.is_prime((candidate - 1) // 2):
             return candidate
     raise Exception("Not found any Sofie Germain prime")
     return -1
